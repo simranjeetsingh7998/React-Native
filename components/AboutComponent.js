@@ -36,6 +36,7 @@ function RenderLeaders() {
         />
     );
 };
+
     return (
         <Card title="Corporate Leadership">
             <FlatList
@@ -48,6 +49,7 @@ function RenderLeaders() {
 }
 
 class About extends Component {
+
     static navigationOptions = {
         title: "About Us",
     };
