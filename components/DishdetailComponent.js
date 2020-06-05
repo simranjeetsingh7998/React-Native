@@ -19,7 +19,7 @@ const mapDispatchToProps = dispatch => ({
 })
 
 function RenderDish(props) {
-    const dish= props.dish;
+    const dish = props.dish;
     
 
     if(dish != null) {
@@ -43,7 +43,7 @@ function RenderDish(props) {
                         type='font-awesome'
                         color='#f50'
                         onPress={() =>  props.favorite ? console.log('Already favorite') : props.onPress()}
-                        />
+                    />
                     <Icon 
                         raised
                         reverse
@@ -62,6 +62,7 @@ function RenderDish(props) {
         );
     }
 }
+
 function RenderComments(props) {
     const comments=props.comments
 
@@ -129,8 +130,7 @@ class Dishdetail extends Component {
             <RenderDish dish={this.props.dishes.dishes[+dishId]} 
                 favorite={this.props.favorites.some(el => el === dishId)}
                 onPress={()=> this.markFavorite(dishId)}
-                toggleModal={() => this.toggleModal()}
-                
+                toggleModal={() => this.toggleModal()} 
             />
             <RenderComments comments={this.props.comments.comments.filter((comment) => comment.dishId === dishId)} />   
         </ScrollView>
@@ -161,9 +161,7 @@ class Dishdetail extends Component {
                     <TouchableHighlight style = {styles.buttonFormWrapping} 
                                     onPress = {() => this.handleSubmit()}>
                         <Text style = {styles.buttonFormText}>Submit</Text>
-                    </TouchableHighlight>
-                               
-
+                    </TouchableHighlight>  
                     <TouchableHighlight style = {{...styles.buttonFormWrapping,backgroundColor : "grey"}}
                                      onPress = {() =>{this.toggleModal()}}>
                         <Text style = {styles.buttonFormText} >Cancel</Text>
