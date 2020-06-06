@@ -123,7 +123,7 @@ const ReservationNavigator = createStackNavigator({
 })
 
 const FavoritesNavigator = createStackNavigator({
-  Reservation: { screen: Favorites }
+  Favorites: { screen: Favorites }
 }, {
   navigationOptions: ({ navigation }) => ({
     headerStyle: {
@@ -186,6 +186,36 @@ const MainNavigator = createDrawerNavigator({
           )
         } 
     },
+    Favorites: {
+      screen: FavoritesNavigator,
+      navigationOptions: {
+        title: 'My Favorites',
+        drawerLabel: 'My Favorites',
+        drawerIcon: ({ tintColor }) => (
+          <Icon
+            name='heart'
+            type='font-awesome'            
+            size={24}
+            color= {tintColor}
+          />
+        ),
+      }
+    },
+    Reservation: { 
+        screen: ReservationNavigator,
+        navigationOptions: {
+        title: 'Reserve Table',
+        drawerLabel: 'Reserve Table',
+        drawerIcon: ({ tintColor }) => (
+          <Icon
+            name='cutlery'
+            type='font-awesome'            
+            size={24}
+            color= {tintColor}
+          />
+        ),
+      }
+    },
     Contact: {
         screen: ContactNavigator,
         navigationOptions: {
@@ -215,36 +245,6 @@ const MainNavigator = createDrawerNavigator({
               />
             )
         }
-    },
-    Reservation: { 
-        screen: ReservationNavigator,
-        navigationOptions: {
-        title: 'Reserve Table',
-        drawerLabel: 'Reserve Table',
-        drawerIcon: ({ tintColor }) => (
-          <Icon
-            name='cutlery'
-            type='font-awesome'            
-            size={24}
-            color= {tintColor}
-          />
-        ),
-      }
-    },
-    FavoritesNavigator: {
-      screen: FavoritesNavigator,
-        navigationOptions: {
-        title: 'My Favorites',
-        drawerLabel: 'My Favorites',
-        drawerIcon: ({ tintColor }) => (
-          <Icon
-            name='heart'
-            type='font-awesome'            
-            size={24}
-            color= {tintColor}
-          />
-        ),
-      }
     }
 }, {
   drawerBackgroundColor: '#D1C4E9',
