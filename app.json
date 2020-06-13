@@ -1,28 +1,12 @@
 {
   "expo": {
-    "name": "confusion",
-    "slug": "confusion",
-    "platforms": [
-      "ios",
-      "android",
-      "web"
-    ],
-    "version": "1.0.0",
-    "orientation": "portrait",
-    "icon": "./assets/icon.png",
-    "splash": {
-      "image": "./assets/splash.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
-    },
-    "updates": {
-      "fallbackToCacheTimeout": 0
-    },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
-    "ios": {
-      "supportsTablet": true
-    }
+   "name": "Confusion",
+   "icon": "./icon.png",
+   "version": "1.0.0",
+   "slug": "confusion",
+   "android": {
+     "package": "com.coursera.confusion",
+     "versionCode": 1
+   }
   }
 }
